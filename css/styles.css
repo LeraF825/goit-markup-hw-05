@@ -10,7 +10,7 @@
   --primary-font-family: 'Roboto', sans-serif;
   --green: #31D0AA ;
   --modal-window: #FCFCFC ;
-  --transition-effect: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-effect: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 h1,
@@ -58,7 +58,7 @@ body {
 .current::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom:-1px;
     left: 0;
     width: 100%;
     height: 4px;
@@ -101,7 +101,7 @@ color: var(--secondary-color) ;
 letter-spacing: 0.02em;
 padding: 24px 0;
 display: block;
-transition: var(--transition-effect);
+transition: color var(--transition-effect);
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -121,7 +121,7 @@ address {
 letter-spacing: 0.02em;
 color: var(--text-color);
 padding: 24px 0;
-transition: var(--transition-effect);
+transition: color var(--transition-effect);
 }
 .nav-header:hover,
 .nav-header:focus {
@@ -164,7 +164,7 @@ transition: var(--transition-effect);
     cursor: pointer;
     border: none;
     border-radius: 4px;
-    transition: var(--transition-effect);
+    transition: background-color var(--transition-effect);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -279,7 +279,7 @@ border-radius: 0px 0px 4px 4px;
     align-items:center;
     border-radius: 50%;
     background-color: var(--primary-brand);
-    transition: var(--transition-effect);
+    transition: background-color var(--transition-effect);
 }
 .social-link:hover,
 .social-link:focus {
@@ -308,7 +308,7 @@ border-radius: 0px 0px 4px 4px;
     border: 1px solid var(--customers-border);
     border-radius: 4px;
     outline: transparent;
-    transition: var(--transition-effect);
+    transition: border fill var(--transition-effect);
 }
 .customers-icon {
     fill: var(--customers-border);
@@ -378,7 +378,7 @@ margin-bottom: 16px;
     align-items:center;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
-    transition: var(--transition-effect);
+    transition: background-color var(--transition-effect);
 }
 .media-link:hover,
 .media-link:focus {
@@ -409,7 +409,7 @@ fill: var(--background-color);
     cursor: pointer;
     padding: 12px 24px;
 border-radius: 4px;
-transition: var(--transition-effect);
+transition: background-color  color var(--transition-effect);
 }
 .btn-filter:hover,
 .btn-filter:focus {
@@ -439,7 +439,7 @@ margin-bottom: 8px;
 .link-menu {
     display: block;
     outline: transparent;
-    transition: var(--transition-effect);
+    transition: box-shadow var(--transition-effect);
 }
 .link-menu:hover,
 .link-menu:focus {
@@ -453,7 +453,8 @@ margin-bottom: 8px;
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity var(--transition-effect), visibility var(--transition-effect);
+    visibility: visible;
 }
 .backdrop.is-hidden {
     opacity: 0;
@@ -491,9 +492,14 @@ border: 1px solid rgba(0, 0, 0, 0.1);
     left: 0%;
     width: 100%;
     height: 100%;
+    font-size: 16px;
+line-height: calc(24/16);
+letter-spacing: 0.02em;
+text-align: center;
+color: var(--background-color);
 background-color: var(--primary-brand);
 transform: translateY(100%);
-transition: var(--transition-effect);
+transition: transform var(--transition-effect);
 }
 .overlay-container {
     position: relative;
