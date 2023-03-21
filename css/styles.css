@@ -308,10 +308,11 @@ border-radius: 0px 0px 4px 4px;
     border: 1px solid var(--customers-border);
     border-radius: 4px;
     outline: transparent;
-    transition: border var(--transition-effect), fill var(--transition-effect);
+    transition: border var(--transition-effect);
 }
 .customers-icon {
     fill: var(--customers-border);
+    transition: fill var(--transition-effect);
 }
 .customers-link:hover,
 .customers-link:focus {
