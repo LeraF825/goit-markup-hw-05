@@ -308,7 +308,7 @@ border-radius: 0px 0px 4px 4px;
     border: 1px solid var(--customers-border);
     border-radius: 4px;
     outline: transparent;
-    transition: border fill var(--transition-effect);
+    transition: border var(--transition-effect), fill var(--transition-effect);
 }
 .customers-icon {
     fill: var(--customers-border);
@@ -409,7 +409,7 @@ fill: var(--background-color);
     cursor: pointer;
     padding: 12px 24px;
 border-radius: 4px;
-transition: background-color  color var(--transition-effect);
+transition: background-color var(--transition-effect), color var(--transition-effect);
 }
 .btn-filter:hover,
 .btn-filter:focus {
